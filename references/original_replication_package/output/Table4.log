@@ -1,0 +1,71 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\Adam\Desktop\ReproductionFiles/output/Table4.log
+  log type:  text
+ opened on:  30 Aug 2021, 20:02:38
+
+First-stage within regression
+
+Fixed-effects (within) regression               Number of obs     =      1,008
+Group variable: cnumber                         Number of groups  =          6
+
+R-sq:                                           Obs per group:
+     within  = 0.0036                                         min =        168
+     between = 0.2820                                         avg =      168.0
+     overall = 0.0007                                         max =        168
+
+                                                F(3,5)            =      19.56
+corr(u_i, Xb)  = -0.1433                        Prob > F          =     0.0034
+
+                                (Std. Err. adjusted for 6 clusters in cnumber)
+------------------------------------------------------------------------------
+             |               Robust
+  ln_realGDP |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+ temperature |
+         --. |    .014593   .0212003     0.69   0.522    -.0399042    .0690902
+         L1. |    .007663   .0152762     0.50   0.637    -.0316058    .0469317
+         L2. |   .0142842   .0157468     0.91   0.406    -.0261942    .0547626
+             |
+       _cons |    4.34249   .0083528   519.89   0.000     4.321018    4.363961
+-------------+----------------------------------------------------------------
+     sigma_u |  .18485869
+     sigma_e |  .25810343
+         rho |  .33904848   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+Fixed-effects (within) IV regression            Number of obs     =      1,008
+Group variable: cnumber                         Number of groups  =          6
+
+R-sq:                                           Obs per group:
+     within  =      .                                         min =        168
+     between =      .                                         avg =      168.0
+     overall = 0.0016                                         max =        168
+
+
+                                                Wald chi2(1)      =       0.40
+corr(u_i, Xb)  = -0.5431                        Prob > chi2       =     0.5261
+
+                                (Std. Err. adjusted for 6 clusters in cnumber)
+------------------------------------------------------------------------------
+             |               Robust
+metals_prod0 |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+  ln_realGDP |   .2140547   .3362889     0.64   0.524    -.4450594    .8731687
+       _cons |  -.9244081   1.458236    -0.63   0.526    -3.782497    1.933681
+-------------+----------------------------------------------------------------
+     sigma_u |  .03903768
+     sigma_e |  .30221883
+         rho |  .01641113   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+Instrumented:   ln_realGDP
+Instruments:    temperature L.temperature L2.temperature
+------------------------------------------------------------------------------
+(1 real change made)
+(1 real change made)
+(1 real change made)
+      name:  <unnamed>
+       log:  C:\Users\Adam\Desktop\ReproductionFiles/output/Table4.log
+  log type:  text
+ closed on:  30 Aug 2021, 20:02:38
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
